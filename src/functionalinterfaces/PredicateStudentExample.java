@@ -36,8 +36,11 @@ public class PredicateStudentExample {
 
 		List<Student> studentList = StudentDataBase.getAllStudents();
 		studentList.forEach(student-> {
-			if(p1.or(p2).test(student))
+			if(p1.or(p2).negate().test(student))
 				System.out.println(student);
+			else 
+				System.out.println(student);
+
 		});
 	}
 	
