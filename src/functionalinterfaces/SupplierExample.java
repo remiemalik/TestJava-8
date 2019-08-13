@@ -18,13 +18,19 @@ public class SupplierExample {
 		
 		Supplier<List<Student>> listSupplier = () -> StudentDataBase.getAllStudents();
 		
-		
+		Supplier<Person> person = () -> {
+			return new Person();
+		};
 		System.out.println("Student is" + studentSupplier.get());
 		
 		for(Student student : listSupplier.get())
 			System.out.println(student);
 
-	
+		
 	}
 
+}
+
+class Person{
+	
 }

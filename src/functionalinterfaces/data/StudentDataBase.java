@@ -2,6 +2,10 @@ package functionalinterfaces.data;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Supplier;
+
+import optional.Bike;
 
 public class StudentDataBase {
 
@@ -30,4 +34,14 @@ public class StudentDataBase {
         List<Student> students = Arrays.asList(student1,student2,student3,student4,student5,student6);
         return students;
     }
+    
+    public static Supplier<Student> studentSupplier = () ->{
+    	Bike bike = new Bike();
+    	bike.setModel("Raleigh");
+    	bike.setName("Avenger");
+    	
+    	Student student =  new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"));
+    	student.setBike(Optional.ofNullable(bike));
+    	return student;
+    };
 }
