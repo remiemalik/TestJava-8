@@ -20,6 +20,15 @@ public class Student {
         this.gender = gender;
         this.activities = activities;
     }
+    
+    public Student() {
+    	
+    }
+    
+  public Student(String name) {
+    	
+    }
+    
 
     public String getGender() {
         return gender;
@@ -61,6 +70,10 @@ public class Student {
 
     public void setActivities(List<String> activities) {
         this.activities = activities;
+    }
+    
+    public void printListActivitites() {
+    	System.out.println(getActivities());
     }
 
     @Override
