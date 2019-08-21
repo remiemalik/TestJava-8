@@ -13,12 +13,14 @@ public class Student {
     private String gender;
     List<String> activities = new ArrayList<>();
     private Optional<Bike> bike = Optional.empty();
-    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
+    private int noteBooks;
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities, int notebooks) {
         this.name = name;
         this.gradeLevel = gradeLevel;
         this.gpa = gpa;
         this.gender = gender;
         this.activities = activities;
+        this.noteBooks = notebooks;
     }
     
     public Student() {
@@ -94,6 +96,16 @@ public class Student {
 	public void setBike(Optional<Bike> bike) {
 		this.bike = bike;
 	}
+
+	public int getNoteBooks() {
+		return noteBooks;
+	}
+
+	public void setNoteBooks(int noteBooks) {
+		this.noteBooks = noteBooks;
+	}
+	
+	
     
     
 

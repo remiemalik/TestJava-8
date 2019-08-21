@@ -46,7 +46,7 @@ public class OptionalExample {
 	}
 	
 	public static void test() {
-		Optional<Student> studentOptional = Optional.ofNullable(new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball")));
+		Optional<Student> studentOptional = Optional.ofNullable(new Student("Adam",2,3.6, "male",Arrays.asList("swimming", "basketball","volleyball"),12));
 		if(studentOptional.isPresent())
 			System.out.println(studentOptional.get().getName());
 		
